@@ -71,7 +71,7 @@ public class Storage {
      * @param name   название вещи
      * @param amount количество вещей
      */
-    private static boolean addToExistObject(String name, int amount) {
+    public static boolean addToExistObject(String name, int amount) {
         if (storage.get(name) + amount > ONE_ITEM_AMOUNT) {
             System.out.printf("Sorry! You can add only %s of %s\n", ONE_ITEM_AMOUNT - storage.get(name), name);
             return false;
@@ -88,7 +88,7 @@ public class Storage {
      * @param name   название вещи
      * @param amount количество вещей
      */
-    private static boolean addNewObject(String name, int amount) {
+    public static boolean addNewObject(String name, int amount) {
         if (getFreePlaces() > 0) {
             if (amount > ONE_ITEM_AMOUNT) {
                 System.out.printf("Sorry! You can add only %s of %s\n", ONE_ITEM_AMOUNT, name);
